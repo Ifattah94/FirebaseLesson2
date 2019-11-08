@@ -30,7 +30,7 @@ class LoginVC: UIViewController {
         tf.backgroundColor = UIColor(red: 247/255, green: 242/255, blue: 242/255, alpha: 0.7)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-       // tf.addTarget(self, action: #selector(formValidation), for: .editingChanged)
+        tf.addTarget(self, action: #selector(formValidation), for: .editingChanged)
         return tf
     }()
     
@@ -42,7 +42,7 @@ class LoginVC: UIViewController {
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
         tf.isSecureTextEntry = true
-        //tf.addTarget(self, action: #selector(formValidation), for: .editingChanged)
+        tf.addTarget(self, action: #selector(formValidation), for: .editingChanged)
         return tf
     }()
     
@@ -89,6 +89,18 @@ class LoginVC: UIViewController {
         let signupVC = SignUpVC()
         signupVC.modalPresentationStyle = .fullScreen
         present(signupVC, animated: true, completion: nil)
+        
+    }
+    
+    
+    @objc func formValidation() {
+        guard emailTextField.hasText, passwordTextField.hasText else {
+            loginButton.backgroundColor = UIColor(red: 129/255, green: 93/255, blue: 93/255, alpha: 1)
+            loginButton.isEnabled = false
+            return
+        }
+        loginButton.isEnabled = true
+        loginButton.backgroundColor = UIColor(red: 129/255, green: 27/255, blue: 27/255, alpha: 1)
         
     }
     
