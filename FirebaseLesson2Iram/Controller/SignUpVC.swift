@@ -105,6 +105,19 @@ class SignUpVC: UIViewController {
         
     }
     
+    //MARK: Private methods
+    
+    private func showAlert(withTitle title: String, andMessage message: String) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertVC, animated: true, completion: nil)
+    }
+    
+
+
+
+
+    
     
     
     //MARK: Constraint functions

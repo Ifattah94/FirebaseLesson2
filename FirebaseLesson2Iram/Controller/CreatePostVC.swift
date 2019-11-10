@@ -10,7 +10,7 @@ import UIKit
 
 class CreatePostVC: UIViewController {
 
-    
+    //MARK: UI Objects
     
     lazy var titleTextField: UITextField = {
         let tf = UITextField()
@@ -25,6 +25,7 @@ class CreatePostVC: UIViewController {
         tv.isEditable = true
         tv.layer.borderColor = UIColor.black.cgColor
         tv.layer.borderWidth = 2
+        
         return tv
     }()
     
@@ -38,7 +39,7 @@ class CreatePostVC: UIViewController {
         return button
     }()
     
-    
+    //MARK: Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -80,6 +81,31 @@ class CreatePostVC: UIViewController {
                                      postButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
                                      postButton.heightAnchor.constraint(lessThanOrEqualToConstant: 50)])
     }
+    
+    
+    //MARK: Private Methods
+    
+    private func handlePostResponse(withResult result: Result<Void, Error>) {
+           switch result {
+           case .success:
+               print("Post created")
+           case let .failure(error):
+               print("An error occurred creating the post: \(error)")
+           }
+       }
+    
+    private func showAlert(withTitle title: String, andMessage message: String) {
+            let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            present(alertVC, animated: true, completion: nil)
+        }
+    
+    
+    
+    
+    //MARK: Objc Handlers
+    
+   
   
 
 }
