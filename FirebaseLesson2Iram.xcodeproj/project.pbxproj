@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		817972EA2375CFC9002404A6 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817972E92375CFC9002404A6 /* SignUpVC.swift */; };
+		8179734623771803002404A6 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8179734523771803002404A6 /* PostsVC.swift */; };
+		8179734823771A74002404A6 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8179734723771A74002404A6 /* CreatePostVC.swift */; };
 		81797A9923747E520043DCD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81797A9823747E520043DCD4 /* AppDelegate.swift */; };
 		81797A9B23747E520043DCD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81797A9A23747E520043DCD4 /* SceneDelegate.swift */; };
 		81797AA223747E530043DCD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81797AA123747E530043DCD4 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		817972E92375CFC9002404A6 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		8179734523771803002404A6 /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVC.swift; sourceTree = "<group>"; };
+		8179734723771A74002404A6 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
 		81797A9523747E510043DCD4 /* FirebaseLesson2Iram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLesson2Iram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81797A9823747E520043DCD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81797A9A23747E520043DCD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				81797AA623747E530043DCD4 /* Info.plist */,
 				81797ABA237482660043DCD4 /* LoginVC.swift */,
 				817972E92375CFC9002404A6 /* SignUpVC.swift */,
+				8179734523771803002404A6 /* PostsVC.swift */,
+				8179734723771A74002404A6 /* CreatePostVC.swift */,
 			);
 			path = FirebaseLesson2Iram;
 			sourceTree = "<group>";
@@ -201,7 +207,9 @@
 			files = (
 				817972EA2375CFC9002404A6 /* SignUpVC.swift in Sources */,
 				81797A9923747E520043DCD4 /* AppDelegate.swift in Sources */,
+				8179734823771A74002404A6 /* CreatePostVC.swift in Sources */,
 				81797A9B23747E520043DCD4 /* SceneDelegate.swift in Sources */,
+				8179734623771803002404A6 /* PostsVC.swift in Sources */,
 				81797ABB237482660043DCD4 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
