@@ -105,6 +105,17 @@ class SignUpVC: UIViewController {
         
     }
     
+    
+    @objc func handleSignupPressed() {
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            //TODO show alert for invalid credentials
+            print("Failed to sign up")
+            return
+        }
+        
+        
+    }
+    
     //MARK: Private methods
     
     private func showAlert(withTitle title: String, andMessage message: String) {

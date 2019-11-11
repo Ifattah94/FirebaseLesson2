@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>203409648494-g45bdb2frcoiv88p1bv1epflqajc4dai.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.203409648494-g45bdb2frcoiv88p1bv1epflqajc4dai</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAVZdlQTGiV5U5YOG-ZXAURX53F_BY3AqI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>203409648494</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Iram.FirebaseLesson2Iram</string>
+	<key>PROJECT_ID</key>
+	<string>posttracker-81f62</string>
+	<key>STORAGE_BUCKET</key>
+	<string>posttracker-81f62.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:203409648494:ios:29c78026b6eb2f0f10ef7f</string>
+	<key>DATABASE_URL</key>
+	<string>https://posttracker-81f62.firebaseio.com</string>
+</dict>
+</plist>

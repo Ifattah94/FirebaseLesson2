@@ -1,0 +1,6 @@
+framework module Pods_FirebaseLesson2Iram {
+  umbrella header "Pods-FirebaseLesson2Iram-umbrella.h"
+
+  export *
+  module * { export * }
+}
