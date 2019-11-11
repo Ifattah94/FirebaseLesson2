@@ -30,6 +30,9 @@ class FirebaseAuthService {
     }
     
     
+    
+    
+    
     func updateUserName(userName: String) {
         let request = auth.currentUser?.createProfileChangeRequest()
         request?.displayName = userName
