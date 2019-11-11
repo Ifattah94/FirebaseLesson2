@@ -29,4 +29,16 @@ class FirebaseAuthService {
         }
     }
     
+    
+    func updateUserName(userName: String) {
+        let request = auth.currentUser?.createProfileChangeRequest()
+        request?.displayName = userName
+        request?.commitChanges(completion: { (error) in
+            if let error = error {
+                print("error changing userName \(error)")
+            }
+            
+        })
+    }
+    
 }

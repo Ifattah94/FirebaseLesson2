@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignUpVC: UIViewController {
 
@@ -60,7 +61,7 @@ class SignUpVC: UIViewController {
      button.setTitleColor(UIColor(red: 247/255, green: 242/255, blue: 242/255, alpha: 0.7), for: .normal)
      button.backgroundColor = UIColor(red: 129/255, green: 93/255, blue: 93/255, alpha: 1)
         button.layer.cornerRadius = 5
-       // button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleSignupPressed), for: .touchUpInside)
         button.isEnabled = false
         return button
     }()
@@ -108,15 +109,48 @@ class SignUpVC: UIViewController {
     
     @objc func handleSignupPressed() {
         guard let email = emailTextField.text, let password = passwordTextField.text else {
-            //TODO show alert for invalid credentials
+            showAlert(withTitle: "Error", andMessage: "Failed to create account")
             print("Failed to sign up")
             return
+        }
+        
+        
+        FirebaseAuthService.manager.createNewUser(withEmail: email, password: password) { [weak self] (result) in
+            
+            self?.handleCreateAccountResponse(with: result)
+            
         }
         
         
     }
     
     //MARK: Private methods
+    
+    private func handleCreateAccountResponse(with result: Result<User, Error>) {
+        switch result {
+        case .success(let user):
+            FirebaseAuthService.manager.updateUserName(userName: self.userNameTextField.text ?? "NA")
+            FirestoreService.manager.createAppUser(user: AppUser(from: user)) { [weak self] newResult in
+                self?.handleCreatedUserInFirestore(result: newResult)
+            }
+        case .failure(let error):
+            showAlert(withTitle: "Error creating user", andMessage: "an error occured while creating new account \(error)")
+        }
+    }
+    
+    private func handleCreatedUserInFirestore(result: Result<Void, Error>) {
+        switch result {
+        case .success:
+            let mainTabVC = MainTabVC()
+            mainTabVC.modalPresentationStyle = .fullScreen
+            present(mainTabVC, animated: true, completion: nil)
+            
+        case .failure(let error):
+            print("error adding user to firestore \(error)")
+        }
+    }
+    
+    
     
     private func showAlert(withTitle title: String, andMessage message: String) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)

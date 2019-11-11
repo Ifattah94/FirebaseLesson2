@@ -11,6 +11,9 @@
 		73FA56C8492E8886D1D77AEA /* Pods_FirebaseLesson2IramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A097224A876F69E2D9717AE0 /* Pods_FirebaseLesson2IramTests.framework */; };
 		8100AE1F2379B19500DE1F45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8100AE1E2379B19500DE1F45 /* GoogleService-Info.plist */; };
 		8100AE212379B5FB00DE1F45 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100AE202379B5FB00DE1F45 /* FirebaseAuthService.swift */; };
+		8100AE242379BF4D00DE1F45 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100AE232379BF4D00DE1F45 /* AppUser.swift */; };
+		8100AE272379C29B00DE1F45 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100AE262379C29B00DE1F45 /* FirestoreService.swift */; };
+		8100AE292379C62200DE1F45 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100AE282379C62200DE1F45 /* MainTabVC.swift */; };
 		817972EA2375CFC9002404A6 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817972E92375CFC9002404A6 /* SignUpVC.swift */; };
 		8179734623771803002404A6 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8179734523771803002404A6 /* PostsVC.swift */; };
 		8179734823771A74002404A6 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8179734723771A74002404A6 /* CreatePostVC.swift */; };
@@ -37,6 +40,9 @@
 		7871A4AE8AAFD4C910AC1FA5 /* Pods-FirebaseLesson2IramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLesson2IramTests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseLesson2IramTests/Pods-FirebaseLesson2IramTests.release.xcconfig"; sourceTree = "<group>"; };
 		8100AE1E2379B19500DE1F45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8100AE202379B5FB00DE1F45 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
+		8100AE232379BF4D00DE1F45 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		8100AE262379C29B00DE1F45 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		8100AE282379C62200DE1F45 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
 		817972E92375CFC9002404A6 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		8179734523771803002404A6 /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVC.swift; sourceTree = "<group>"; };
 		8179734723771A74002404A6 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
@@ -96,6 +102,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8100AE222379BF2E00DE1F45 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8100AE232379BF4D00DE1F45 /* AppUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8100AE252379C25F00DE1F45 /* FirebaseManagers */ = {
+			isa = PBXGroup;
+			children = (
+				8100AE202379B5FB00DE1F45 /* FirebaseAuthService.swift */,
+				8100AE262379C29B00DE1F45 /* FirestoreService.swift */,
+			);
+			path = FirebaseManagers;
+			sourceTree = "<group>";
+		};
 		814E81862378A7E20046DAAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +126,7 @@
 				817972E92375CFC9002404A6 /* SignUpVC.swift */,
 				8179734523771803002404A6 /* PostsVC.swift */,
 				8179734723771A74002404A6 /* CreatePostVC.swift */,
+				8100AE282379C62200DE1F45 /* MainTabVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -130,6 +154,7 @@
 		81797A9723747E510043DCD4 /* FirebaseLesson2Iram */ = {
 			isa = PBXGroup;
 			children = (
+				8100AE222379BF2E00DE1F45 /* Models */,
 				81797A9823747E520043DCD4 /* AppDelegate.swift */,
 				8100AE1E2379B19500DE1F45 /* GoogleService-Info.plist */,
 				81797A9A23747E520043DCD4 /* SceneDelegate.swift */,
@@ -137,7 +162,7 @@
 				81797AA323747E530043DCD4 /* LaunchScreen.storyboard */,
 				81797AA623747E530043DCD4 /* Info.plist */,
 				814E81862378A7E20046DAAD /* Controller */,
-				8100AE202379B5FB00DE1F45 /* FirebaseAuthService.swift */,
+				8100AE252379C25F00DE1F45 /* FirebaseManagers */,
 			);
 			path = FirebaseLesson2Iram;
 			sourceTree = "<group>";
@@ -319,12 +344,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8100AE242379BF4D00DE1F45 /* AppUser.swift in Sources */,
 				817972EA2375CFC9002404A6 /* SignUpVC.swift in Sources */,
 				81797A9923747E520043DCD4 /* AppDelegate.swift in Sources */,
+				8100AE292379C62200DE1F45 /* MainTabVC.swift in Sources */,
 				8179734823771A74002404A6 /* CreatePostVC.swift in Sources */,
 				81797A9B23747E520043DCD4 /* SceneDelegate.swift in Sources */,
 				8179734623771803002404A6 /* PostsVC.swift in Sources */,
 				81797ABB237482660043DCD4 /* LoginVC.swift in Sources */,
+				8100AE272379C29B00DE1F45 /* FirestoreService.swift in Sources */,
 				8100AE212379B5FB00DE1F45 /* FirebaseAuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
