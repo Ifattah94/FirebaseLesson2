@@ -127,14 +127,22 @@ class SignUpVC: UIViewController {
     //MARK: Private methods
     
     private func handleCreateAccountResponse(with result: Result<User, Error>) {
+        DispatchQueue.main.async {
+            
+        
         switch result {
         case .success(let user):
             FirebaseAuthService.manager.updateUserName(userName: self.userNameTextField.text ?? "NA")
+         
+                
+            
             FirestoreService.manager.createAppUser(user: AppUser(from: user)) { [weak self] newResult in
                 self?.handleCreatedUserInFirestore(result: newResult)
             }
+            
         case .failure(let error):
-            showAlert(withTitle: "Error creating user", andMessage: "an error occured while creating new account \(error)")
+            self.showAlert(withTitle: "Error creating user", andMessage: "an error occured while creating new account \(error)")
+        }
         }
     }
     
