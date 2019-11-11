@@ -33,9 +33,10 @@ class CreatePostVC: UIViewController {
        let button = UIButton()
         button.setTitleColor(.black, for: .normal)
         button.showsTouchWhenHighlighted = true
-        button.isEnabled = false
+        button.isEnabled = true
         button.backgroundColor = .gray
         button.setTitle("Post", for: .normal)
+        button.addTarget(self, action: #selector(postButtonPressed), for: .touchUpInside)
         return button
     }()
     
@@ -89,6 +90,7 @@ class CreatePostVC: UIViewController {
            switch result {
            case .success:
                print("Post created")
+               self.showAlert(withTitle:"Yay", andMessage: "New post was added")
            case let .failure(error):
                print("An error occurred creating the post: \(error)")
            }
@@ -105,6 +107,23 @@ class CreatePostVC: UIViewController {
     
     //MARK: Objc Handlers
     
+    @objc func postButtonPressed() {
+        guard let title = titleTextField.text, title != "", let body = bodyTextView.text, body != "" else {
+            showAlert(withTitle: "Error", andMessage: "All fields must be filled")
+            return
+        }
+        guard let user = FirebaseAuthService.manager.currentUser else {
+            print("No current user")
+            return
+        }
+        let newPost = Post(title: title, body: body, userUID: user.uid)
+        
+        FirestoreService.manager.createPost(post: newPost) { (result) in
+            self.handlePostResponse(withResult: result)
+        }
+        
+        
+    }
    
   
 

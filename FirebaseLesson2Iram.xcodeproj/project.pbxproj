@@ -14,6 +14,7 @@
 		8100AE242379BF4D00DE1F45 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100AE232379BF4D00DE1F45 /* AppUser.swift */; };
 		8100AE272379C29B00DE1F45 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100AE262379C29B00DE1F45 /* FirestoreService.swift */; };
 		8100AE292379C62200DE1F45 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100AE282379C62200DE1F45 /* MainTabVC.swift */; };
+		8134602F237A0E17008F35A6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8134602E237A0E17008F35A6 /* Post.swift */; };
 		817972EA2375CFC9002404A6 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817972E92375CFC9002404A6 /* SignUpVC.swift */; };
 		8179734623771803002404A6 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8179734523771803002404A6 /* PostsVC.swift */; };
 		8179734823771A74002404A6 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8179734723771A74002404A6 /* CreatePostVC.swift */; };
@@ -43,6 +44,7 @@
 		8100AE232379BF4D00DE1F45 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		8100AE262379C29B00DE1F45 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		8100AE282379C62200DE1F45 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
+		8134602E237A0E17008F35A6 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		817972E92375CFC9002404A6 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		8179734523771803002404A6 /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVC.swift; sourceTree = "<group>"; };
 		8179734723771A74002404A6 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				8100AE232379BF4D00DE1F45 /* AppUser.swift */,
+				8134602E237A0E17008F35A6 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8100AE242379BF4D00DE1F45 /* AppUser.swift in Sources */,
+				8134602F237A0E17008F35A6 /* Post.swift in Sources */,
 				817972EA2375CFC9002404A6 /* SignUpVC.swift in Sources */,
 				81797A9923747E520043DCD4 /* AppDelegate.swift in Sources */,
 				8100AE292379C62200DE1F45 /* MainTabVC.swift in Sources */,
