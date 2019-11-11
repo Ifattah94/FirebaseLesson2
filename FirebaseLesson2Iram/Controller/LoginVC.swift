@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginVC: UIViewController {
     
@@ -53,7 +54,7 @@ class LoginVC: UIViewController {
         button.setTitleColor(UIColor(red: 247/255, green: 242/255, blue: 242/255, alpha: 0.7), for: .normal)
         button.backgroundColor = UIColor(red: 129/255, green: 93/255, blue: 93/255, alpha: 1)
            button.layer.cornerRadius = 5
-          // button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleLoginPressed), for: .touchUpInside)
            button.isEnabled = false
            return button
        }()
@@ -104,6 +105,17 @@ class LoginVC: UIViewController {
         
     }
     
+    
+    @objc func handleLoginPressed() {
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            showAlert(withTitle: "Error", andMessage: "Invalid credentials")
+            return 
+        }
+        FirebaseAuthService.manager.login(with: email, and: password, completion: {[weak self] (result) in
+            self?.handleLoginResponse(withResult: result)
+        })
+    }
+    
     //MARK: Private methods
     
     private func showAlert(withTitle title: String, andMessage message: String) {
@@ -112,8 +124,19 @@ class LoginVC: UIViewController {
             present(alertVC, animated: true, completion: nil)
         }
     
-    
-    
+    private func handleLoginResponse(withResult result: Result<User, Error>) {
+        DispatchQueue.main.async {
+            switch result {
+            case .failure(let error):
+                self.showAlert(withTitle: "Error", andMessage: "Error logging in \(error)")
+                
+            case.success:
+                let mainTabVC = MainTabVC()
+                mainTabVC.modalPresentationStyle = .fullScreen
+                self.present(mainTabVC, animated: true, completion: nil)
+            }
+        }
+    }
     
     
     

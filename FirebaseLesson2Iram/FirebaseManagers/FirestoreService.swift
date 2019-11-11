@@ -23,7 +23,9 @@ class FirestoreService {
             if let error = error {
                 completion(.failure(error))
                 print(error)
+                return
             }
+            completion(.success(()))
         }
         
     }

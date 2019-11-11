@@ -132,11 +132,9 @@ class SignUpVC: UIViewController {
         
         switch result {
         case .success(let user):
-            FirebaseAuthService.manager.updateUserName(userName: self.userNameTextField.text ?? "NA")
-         
-                
             
             FirestoreService.manager.createAppUser(user: AppUser(from: user)) { [weak self] newResult in
+                FirebaseAuthService.manager.updateUserName(userName: self?.userNameTextField.text ?? "NA")
                 self?.handleCreatedUserInFirestore(result: newResult)
             }
             

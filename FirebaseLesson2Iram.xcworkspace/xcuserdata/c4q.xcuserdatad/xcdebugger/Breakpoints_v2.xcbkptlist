@@ -7,71 +7,87 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D63364B9-4FAC-4E9C-90F9-6D631184E773"
+            uuid = "1637D797-62DB-4D77-8E1E-35AC70C7107A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FirebaseLesson2Iram/Controller/SignUpVC.swift"
+            filePath = "FirebaseLesson2Iram/FirebaseManagers/FirebaseAuthService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "handleCreatedUserInFirestore(result:)"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "updateUserName(userName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1637D797-62DB-4D77-8E1E-35AC70C7107A - d26cc3ec6a6700b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FirebaseLesson2Iram.FirebaseAuthService.updateUserName(userName: Swift.String) -&gt; ()"
+                  moduleName = "FirebaseLesson2Iram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/c4q/Desktop/iAStuff/FirebaseLesson2Iram/FirebaseLesson2Iram/FirebaseManagers/FirebaseAuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "505">
+               </Location>
+               <Location
+                  uuid = "1637D797-62DB-4D77-8E1E-35AC70C7107A - a2eb37287c1f9142"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FirebaseLesson2Iram.FirebaseAuthService.updateUserName(userName: Swift.String) -&gt; ()"
+                  moduleName = "FirebaseLesson2Iram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/c4q/Desktop/iAStuff/FirebaseLesson2Iram/FirebaseLesson2Iram/FirebaseManagers/FirebaseAuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "95">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D072254F-8E68-41E4-A238-4295FC8C77B4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseLesson2Iram/FirebaseManagers/FirebaseAuthService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "updateUserName(userName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1E454F4D-41D1-4675-A025-A414BDDE7BAF"
+            uuid = "A3A9DE00-5D0A-41A8-9874-5160514A0DAC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FirebaseLesson2Iram/Controller/SignUpVC.swift"
+            filePath = "FirebaseLesson2Iram/Models/AppUser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "handleCreatedUserInFirestore(result:)"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init(from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C1B896BE-F5FA-4F61-851B-4B6600901866"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FirebaseLesson2Iram/Controller/SignUpVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "handleCreateAccountResponse(with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "153C8793-A729-4975-B708-7E8D7C1857C4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FirebaseLesson2Iram/Controller/SignUpVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "handleCreatedUserInFirestore(result:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A462376-B953-45AD-98B4-8C2DC06CF53C"
+            uuid = "BA978DB5-550D-4231-B30E-A69AE4B706B3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -87,20 +103,20 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FE887792-4CEC-4C8C-B6EC-3B28FE02DD0C"
+            uuid = "BDAB96F4-8E6C-4A4A-A8D9-14A2DF85AD83"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FirebaseLesson2Iram/Controller/SignUpVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "handleCreateAccountResponse(with:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "FE887792-4CEC-4C8C-B6EC-3B28FE02DD0C - 81a5abb55d51106d"
+                  uuid = "BDAB96F4-8E6C-4A4A-A8D9-14A2DF85AD83 - 81a5abb55d51106d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -110,12 +126,12 @@
                   urlString = "file:///Users/c4q/Desktop/iAStuff/FirebaseLesson2Iram/FirebaseLesson2Iram/Controller/SignUpVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
-                  offsetFromSymbolStart = "754">
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "280">
                </Location>
                <Location
-                  uuid = "FE887792-4CEC-4C8C-B6EC-3B28FE02DD0C - d292df676e763fe8"
+                  uuid = "BDAB96F4-8E6C-4A4A-A8D9-14A2DF85AD83 - d292df676e763fe8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -125,11 +141,27 @@
                   urlString = "file:///Users/c4q/Desktop/iAStuff/FirebaseLesson2Iram/FirebaseLesson2Iram/Controller/SignUpVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
-                  offsetFromSymbolStart = "101">
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "116">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D94B371A-FC1D-4645-9C2A-7EF29EEBBB1D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseLesson2Iram/Models/AppUser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(from:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
